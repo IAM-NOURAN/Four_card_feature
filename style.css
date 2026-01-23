@@ -18,6 +18,7 @@ img{
     justify-content:center;
     height: 30vh;
     margin-top:18px ;
+    animation: txt 2s ;
 }
 
 .txt{
@@ -124,9 +125,123 @@ img{
 }
 
 .subhead{
-
-
     margin: 12px;
     font-weight: 500;
     color: hsl(233, 12%, 27%);
+}
+.sup:hover,.team:hover,.karma:hover,.calc:hover{
+    cursor:pointer;
+    transform: scale(1.05);
+    h4{
+        transform: scale(1.02);
+    }
+
+}
+
+.sup,.team,.karma,.calc{
+       animation-name: move;
+       animation-duration: 3s;
+       animation-iteration-count: 1;
+       transition: transform 0.5s ease-out 0.1s;
+       h4{
+       transition: transform 0.2s ease-out 0.15s;
+       }
+    }
+
+@keyframes move{
+
+from{
+    transform: translateY(30PX);
+    opacity: 0;
+}
+to{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+}
+
+@keyframes txt{
+from{
+    opacity: 0;
+}
+to{
+    opacity: 1;
+}
+}
+
+@media screen and (max-width:767px){
+
+    img{
+    width: 60px;
+    position: sticky;
+    left: 75%;
+    top: 15px;
+}
+
+    .hero-section{
+        height: auto;
+    }
+
+    .txt{
+        width: 80%;
+    }
+
+    .second{
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    width: 100%;
+    }
+
+    .one{
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    position: static;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    }
+
+    .two{
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding-top: 10px;
+    padding: 0;
+    align-content: space-between;
+    }
+    
+    .three{
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    position: static;
+    padding-top: 10px;
+
+    }
+
+    .sup,.team,.karma,.calc{
+        width: 100%;
+        margin: 10px;
+        padding: 10px;
+    }
+    .team{
+        margin-top: 0;
+    }
+    .karma{
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width:768px ) and (max-width:1023px){
+
+    .hero-section{
+        .txt{
+            width: 100%;
+        }
+    }
+
 }
