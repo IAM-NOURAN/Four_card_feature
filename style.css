@@ -56,7 +56,7 @@ img{
 }
 
 .two .team{
-    height: 46%;
+    max-height: 46%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@ img{
 }
 
 .two .karma{
-    height: 46%;
+    max-height: 46%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -80,7 +80,7 @@ img{
 }
 
 .one , .three{
-    height: 46%;
+    max-height: 46%;
     width: 27%;
     display: flex;
     flex-direction: column;
